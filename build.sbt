@@ -13,7 +13,7 @@ libraryDependencies ++= Seq(
     "joda-time" % "joda-time" % "2.8.1",
     "org.joda" % "joda-convert" % "1.7",
     "com.github.tototoshi" %% "slick-joda-mapper" % "2.0.0",
-    "com.typesafe.akka" % "akka-actor_2.10" % "2.3.12",
+    "com.typesafe.akka" % "akka-actor_2.11" % "2.3.12",
     "org.scala-lang.modules" %% "scala-xml" % "1.0.2",
     "com.typesafe.slick" %% "slick" % "3.0.2"
 )
