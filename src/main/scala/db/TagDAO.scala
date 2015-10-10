@@ -17,5 +17,5 @@ class TagTable(tag: Tag) extends Table[ExpenseTag](tag, "tag") {
 }
 
 object TagDAO {
-  val tags = TableQuery[TagTable]
+  val table = TableQuery[TagTable]
 }

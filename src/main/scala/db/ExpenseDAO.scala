@@ -21,6 +21,6 @@ class ExpenseTable(tag: Tag) extends Table[Expense](tag, "expense") {
   def * = (id, amount, date, description) <> (Expense.tupled, Expense.unapply)
 }
 
-object ExpenseDAO {
-  val expenses = TableQuery[ExpenseTable]
+object ExpenseDAO extends DAO {
+  val table = TableQuery[ExpenseTable]
 }

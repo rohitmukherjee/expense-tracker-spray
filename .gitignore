@@ -1,2 +1,11 @@
-target/
-/bin
+target
+bin
+*.lck
+*.tmp
+*.script
+*.classpath
+*.cache
+*.metadata
+*.settings
+*.properties
+*.log

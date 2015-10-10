@@ -14,7 +14,12 @@ class ExpenseWithTagTable(tag: Tag) extends Table[ExpenseWithTag](tag, "expense_
   def id = column[Int]("id", O.AutoInc, O.PrimaryKey)
   def expense = column[Int]("expense")
   def expenseTag = column[Int]("tag")
-  def expenseKey = foreignKey("expense_with_tag_expense_fk", expense, ExpenseDAO.expenses)(_.id)
-  def tagKey = foreignKey("expense_with_tag_tag_fk", expenseTag, TagDAO.tags)(_.id)
+  def expenseKey = foreignKey("expense_with_tag_expense_fk", expense, ExpenseDAO.table)(_.id)
+  def tagKey = foreignKey("expense_with_tag_tag_fk", expenseTag, TagDAO.table)(_.id)
   def * = (id, expense, expenseTag) <> (ExpenseWithTag.tupled, ExpenseWithTag.unapply)
+}
+
+object ExpenseWithTagDAO extends DAO {
+  val table = TableQuery[ExpenseWithTagTable]
+
 }
