@@ -9,7 +9,6 @@ import slick.driver.HsqldbDriver.api.doubleColumnType
 import slick.driver.HsqldbDriver.api.intColumnType
 import slick.driver.HsqldbDriver.api.stringColumnType
 import slick.driver.HsqldbDriver.api.Table
-import slick.lifted.ProvenShape.proveShapeOf
 import slick.lifted.Tag
 import slick.lifted.TableQuery
 
@@ -23,4 +22,6 @@ class ExpenseTable(tag: Tag) extends Table[Expense](tag, "expense") {
 
 object ExpenseDAO extends DAO {
   val table = TableQuery[ExpenseTable]
+
+
 }

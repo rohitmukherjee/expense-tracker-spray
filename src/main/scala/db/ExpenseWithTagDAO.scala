@@ -6,7 +6,6 @@ import slick.driver.HsqldbDriver.api._
 import slick.driver.HsqldbDriver.api.Column
 import slick.driver.HsqldbDriver.api.intColumnType
 import slick.driver.HsqldbDriver.api.Table
-import slick.lifted.ProvenShape.proveShapeOf
 import slick.lifted.Tag
 import models.ExpenseWithTag
 
